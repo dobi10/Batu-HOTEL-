@@ -1,7 +1,7 @@
 import { db } from "./app.js";
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 
-window.book = async function(){
+window.book = async function () {
 
 let name = document.getElementById("name").value;
 let phone = document.getElementById("phone").value;
@@ -15,7 +15,12 @@ return;
 }
 
 await addDoc(collection(db,"bookings"),{
-name,phone,room,date,days,time:new Date()
+name,
+phone,
+room,
+date,
+days,
+time:new Date()
 });
 
 document.getElementById("result").innerText =
