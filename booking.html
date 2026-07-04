@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Booking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<h2 style="color:gold;">Booking</h2>
+<div>
+<a href="index.html">Home</a>
+<a href="booking.html">Booking</a>
+<a href="admin.html">Admin</a>
+</div>
+</nav>
+
+<div class="section">
+
+<h2 style="color:gold;">Book Room</h2>
+
+<input id="name" placeholder="Full Name">
+<input id="phone" placeholder="Phone">
+
+<select id="room">
+<option>Standard Room</option>
+<option>Deluxe Room</option>
+<option>Luxury Suite</option>
+</select>
+
+<input type="date" id="date">
+<input type="number" id="days" placeholder="Days">
+
+<button class="btn" onclick="book()">Book</button>
+
+<p id="result"></p>
+
+</div>
+
+<script type="module" src="booking.js"></script>
+
+</body>
+</html>
