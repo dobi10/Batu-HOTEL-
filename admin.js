@@ -1,26 +1,26 @@
-import { auth, db } from "./app.js";
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-import { collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { db, auth } from "./app.js";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+import { collection, getDocs } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 
-window.login = async function(){
+window.login = async function () {
 
 let email = document.getElementById("user").value;
 let pass = document.getElementById("pass").value;
 
-try{
+try {
 await signInWithEmailAndPassword(auth,email,pass);
-document.getElementById("panel").style.display="block";
+document.getElementById("panel").style.display = "block";
 alert("Login success");
-}catch(e){
+} catch (e) {
 alert("Wrong login");
 }
 }
 
-window.load = async function(){
+window.load = async function () {
 
 let snap = await getDocs(collection(db,"bookings"));
 
-let html="";
+let html = "";
 
 snap.forEach(doc=>{
 let d = doc.data();
@@ -35,4 +35,5 @@ html += `
 });
 
 document.getElementById("panel").innerHTML = html;
+}document.getElementById("panel").innerHTML = html;
 }
