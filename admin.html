@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<h2 style="color:gold;">Admin Panel</h2>
+<div>
+<a href="index.html">Home</a>
+<a href="booking.html">Booking</a>
+<a href="admin.html">Admin</a>
+</div>
+</nav>
+
+<div class="section">
+
+<h2>Login</h2>
+
+<input id="user" placeholder="Email">
+<input id="pass" type="password" placeholder="Password">
+
+<button class="btn" onclick="login()">Login</button>
+
+<div id="panel" style="display:none;"></div>
+<button class="btn" onclick="load()">Load Bookings</button>
+
+</div>
+
+<script type="module" src="admin.js"></script>
+
+</body>
+</html>
